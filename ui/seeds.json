@@ -1,0 +1,22 @@
+[
+ {"id":"seed-01","title":"Small\nTools","kind":"PROJECT","color":"#ce4c3f","summary":"반복되는 일을 간단하게 만드는 작은 도구 모음.","body":"일상에서 자주 쓰는 기능을 한 화면에 모았다.","tags":["Web","Utility"]},
+ {"id":"seed-02","title":"빛과\n거리","kind":"RESEARCH","color":"#b45b32","summary":"거리별 관찰값을 비교한 탐구.","body":"측정 조건과 반복 관찰한 자료를 함께 정리했다.","tags":["물리","PDF"]},
+ {"id":"seed-03","title":"Interface\nStudies","kind":"PROJECT","color":"#3d428f","summary":"화면의 움직임과 전환에 관한 실험.","body":"동작이 이어지는 타이밍과 간격을 조정했다.","tags":["Interaction"]},
+ {"id":"seed-04","title":"Project\nAtlas","kind":"PROJECT","color":"#5142ad","summary":"아이디어와 작업을 모으는 개인 작업 공간.","body":"작업 노트와 진행 중인 일을 한곳에 묶었다.","tags":["Web App"]},
+ {"id":"seed-05","title":"데이터의\n패턴","kind":"RESEARCH","color":"#267d87","summary":"관찰한 데이터에서 패턴을 찾는 탐구.","body":"같은 기준으로 정리한 자료의 분포와 변화 추이를 비교했다.","tags":["Data"]},
+ {"id":"seed-06","title":"Visual\nExperiments","kind":"PROJECT","color":"#258a91","summary":"코드로 형태와 움직임을 만드는 시각 실험.","body":"색, 위치, 속도의 조합을 독립된 작업으로 모았다.","tags":["Creative Coding"]},
+ {"id":"seed-07","title":"질문의\n기록","kind":"RESEARCH","color":"#6d763a","summary":"질문이 탐구로 이어지는 과정의 기록.","body":"처음의 가설과 관찰, 남은 의문을 정리했다.","tags":["Notes"]},
+ {"id":"seed-08","title":"Sound\nNotebook","kind":"PROJECT","color":"#b64b6d","summary":"소리의 패턴을 기록하는 실험.","body":"짧은 소리와 반복되는 리듬을 시각화했다.","tags":["Audio","Web"]},
+ {"id":"seed-09","title":"물의\n흐름","kind":"RESEARCH","color":"#326d9d","summary":"흐름의 변화를 관찰한 탐구.","body":"조건에 따른 관찰 기록을 비교했다.","tags":["Science"]},
+ {"id":"seed-10","title":"Orbit\nClock","kind":"PROJECT","color":"#5650a1","summary":"시간을 원의 움직임으로 표현한 시계.","body":"숫자와 회전의 관계를 화면에 옮겼다.","tags":["Animation"]},
+ {"id":"seed-11","title":"도시의\n온도","kind":"RESEARCH","color":"#bd6b3c","summary":"장소에 따른 관찰값을 비교한 기록.","body":"관찰 시각과 주변 조건을 함께 기록했다.","tags":["Environment"]},
+ {"id":"seed-12","title":"Pocket\nLibrary","kind":"PROJECT","color":"#38786e","summary":"읽은 책과 메모를 모으는 작은 서재.","body":"책 한 권과 그때의 생각을 연결했다.","tags":["Library"]},
+ {"id":"seed-13","title":"색의\n기록","kind":"RESEARCH","color":"#9b526e","summary":"조건에 따른 색의 변화를 관찰한 탐구.","body":"같은 대상을 다른 조건에서 관찰했다.","tags":["Color"]},
+ {"id":"seed-14","title":"Motion\nLab","kind":"PROJECT","color":"#d26b3a","summary":"이동과 회전의 리듬을 실험한 작업.","body":"속도와 가속에 따른 화면 변화를 비교했다.","tags":["Motion"]},
+ {"id":"seed-15","title":"에너지와\n전환","kind":"RESEARCH","color":"#777b3c","summary":"변화 과정에 관한 탐구 기록.","body":"실험의 조건과 관찰 과정을 단계별로 정리했다.","tags":["Physics"]},
+ {"id":"seed-16","title":"Field\nNotes","kind":"PROJECT","color":"#567b6e","summary":"관찰한 장면을 모으는 기록 도구.","body":"짧은 메모와 자료를 함께 저장했다.","tags":["Notes"]},
+ {"id":"seed-17","title":"관찰의\n방법","kind":"RESEARCH","color":"#8a5a49","summary":"관찰 기준을 정하고 비교한 기록.","body":"조건을 일정하게 유지하며 자료를 수집했다.","tags":["Research"]},
+ {"id":"seed-18","title":"Pixel\nGarden","kind":"PROJECT","color":"#6c8060","summary":"작은 도형이 모이는 화면 실험.","body":"반복되는 형태와 색의 조합을 탐색했다.","tags":["Visual"]},
+ {"id":"seed-19","title":"경로와\n선택","kind":"RESEARCH","color":"#456f87","summary":"서로 다른 경로를 비교한 탐구.","body":"각 조건과 선택의 과정을 도식으로 정리했다.","tags":["Math"]},
+ {"id":"seed-20","title":"Open\nCanvas","kind":"PROJECT","color":"#b65c4b","summary":"생각을 가볍게 펼치는 시각 도구.","body":"여러 조각을 배치하고 연결하는 흐름을 만들었다.","tags":["Canvas"]}
+]

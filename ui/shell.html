@@ -1,0 +1,76 @@
+<section id="ar-preview" lang="ko" aria-label="Archive Repository">
+  <header class="ar-header">
+    <button class="ar-monogram cursor-interaction" type="button" data-home aria-label="처음으로">ar.</button>
+  </header>
+  <main class="ar-collection">
+    <div class="ar-folder-current" data-folder-current hidden><button type="button" data-folder-back data-folder-target="" aria-label="폴더 닫기 · 폴더 밖으로 이동">↙</button><span data-folder-title></span><button type="button" data-folder-prev aria-label="폴더 이전 책자">‹</button><span data-folder-count></span><button type="button" data-folder-next aria-label="폴더 다음 책자">›</button><button type="button" data-folder-rename aria-label="폴더 이름 변경">✎</button><button type="button" data-folder-delete aria-label="폴더 삭제">×</button></div>
+    <div class="ar-shelf" aria-label="책자 컬렉션"></div>
+    <div class="ar-folder-layer" data-folder-layer aria-label="폴더 안 책자" hidden></div><p class="ar-folder-empty" data-folder-empty hidden>비어 있음</p>
+    <footer class="ar-collection-footer"><div class="ar-wordmark">Archive Repository</div><nav class="ar-collection-navigation" aria-label="컬렉션 이동"><button type="button" class="ar-arrow cursor-interaction" data-collection-prev aria-label="이전 책자">‹</button><span data-collection-count></span><button type="button" class="ar-arrow cursor-interaction" data-collection-next aria-label="다음 책자">›</button><span class="ar-footer-divider" aria-hidden="true">·</span><button type="button" class="ar-text-button cursor-interaction" data-add>추가</button><button type="button" class="ar-text-button" data-folder-create>폴더 만들기</button><button type="button" class="ar-settings-button cursor-interaction" data-settings aria-label="설정">⚙</button></nav></footer>
+  </main>
+  <section class="ar-detail" aria-label="기록 상세" hidden>
+    <div class="ar-cover-stage">
+      <div class="ar-detail-cover" role="button" tabindex="0" aria-label="소개 보기" aria-expanded="false" aria-controls="ar-overview"></div>
+      <section id="ar-overview" class="ar-overview" aria-labelledby="ar-overview-title" hidden>
+        <div class="ar-overview-type"></div><h2 id="ar-overview-title"></h2>
+        <div class="ar-overview-pages" data-overview-pages tabindex="0" aria-label="소개 내용">
+          <div class="ar-overview-short" data-overview-short>
+            <div class="ar-overview-gallery" hidden><img class="ar-overview-image" data-overview-image alt=""><div class="ar-overview-thumbnails" data-overview-thumbnails aria-label="소개 사진"></div></div>
+            <p class="ar-overview-summary"></p><div class="ar-record-links" data-overview-links hidden></div>
+          </div>
+          <div class="ar-overview-long" data-overview-long hidden><div class="ar-story-viewport" data-story-viewport><div class="ar-story-flow" data-story-flow></div></div></div>
+        </div>
+        <nav class="ar-overview-navigation" data-overview-navigation aria-label="소개 페이지" hidden><button type="button" data-overview-prev aria-label="이전 소개 페이지">‹</button><div class="ar-overview-dots" data-overview-dots></div><button type="button" data-overview-next aria-label="다음 소개 페이지">›</button><span class="ar-visually-hidden" data-overview-count role="status" aria-live="polite"></span></nav>
+        <div class="ar-actions"><button class="ar-primary cursor-interaction" type="button" data-view></button><button class="ar-secondary cursor-interaction" type="button" data-attachments aria-expanded="false" aria-controls="ar-files">첨부파일</button><button class="ar-secondary cursor-interaction" type="button" data-edit>수정</button><button class="ar-secondary cursor-interaction" type="button" data-share hidden>링크 복사</button><button class="ar-secondary ar-delete-button cursor-interaction" type="button" data-delete aria-label="기록 삭제">삭제</button></div>
+        <div id="ar-files" class="ar-attachment-panel" hidden></div>
+      </section>
+      <button class="ar-close cursor-interaction" type="button" data-close aria-label="닫기">×</button>
+      <button class="ar-stage-arrow ar-stage-prev cursor-interaction" type="button" data-record-prev aria-label="이전 기록">‹</button>
+      <button class="ar-stage-arrow ar-stage-next cursor-interaction" type="button" data-record-next aria-label="다음 기록">›</button>
+      <div class="ar-stage-actions"><button class="ar-overview-toggle cursor-interaction" type="button" data-overview-toggle aria-expanded="false" aria-controls="ar-overview">긴 소개</button><button class="ar-stage-open cursor-interaction" type="button" data-stage-open><span></span><span aria-hidden="true">↗</span></button></div>
+    </div>
+    <article class="ar-article" hidden>
+      <div class="ar-detail-meta"><span class="ar-detail-type ar-eyebrow"></span><span class="ar-detail-index"></span></div>
+      <h2 class="ar-detail-title"></h2><p class="ar-detail-summary"></p><div class="ar-record-links" data-detail-links hidden></div><div class="ar-detail-tags"></div><p class="ar-detail-body"></p>
+    </article>
+    <section class="ar-settings-content" aria-label="설정" hidden>
+      <div class="ar-settings-line"><h2>프로젝트 열기</h2><div class="ar-choice"><button type="button" class="cursor-interaction" data-mode="inside" aria-pressed="true">사이트 내부</button><button type="button" class="cursor-interaction" data-mode="tab" aria-pressed="false">새 탭</button></div></div>
+      <div class="ar-settings-line"><h2>기록</h2><button type="button" class="ar-primary cursor-interaction" data-add>추가</button></div>
+      <div class="ar-management-list"></div>
+      <div class="ar-settings-line"><h2>앱</h2><div class="ar-choice"><button type="button" data-install>앱 설치</button><button type="button" data-shortcut>바로가기 다운로드</button></div></div><p class="ar-install-status" data-install-status role="status"></p>
+    </section>
+    <section class="ar-viewer" aria-label="결과물" hidden></section>
+  </section>
+  <section class="ar-editor" aria-label="기록 편집" hidden>
+    <form data-record-form>
+      <div class="ar-editor-heading"><h2 data-editor-title>새 기록</h2><div><button type="button" class="ar-secondary cursor-interaction" data-cancel>취소</button><button type="button" class="ar-primary cursor-interaction" data-save>저장</button></div></div>
+      <div class="ar-editor-layout"><aside class="ar-editor-preview"><div class="ar-editor-cover" data-editor-cover role="img" aria-label="표지 미리보기"></div><span data-editor-meta></span></aside>
+      <div class="ar-form-grid">
+        <label>제목<input name="title" required maxlength="120" autocomplete="off"></label>
+        <label>분류<select name="kind"><option value="PROJECT">개발 프로젝트</option><option value="RESEARCH">탐구 보고서</option></select></label>
+        <label class="ar-wide-field">폴더<select name="folderId"><option value="">폴더 밖</option></select></label>
+        <fieldset class="ar-color-field"><legend>표지 색상</legend><div class="ar-color-presets" data-color-presets></div><label class="ar-color-custom" data-color-custom><span aria-hidden="true">🎨</span><input name="color" type="color" value="#5142ad" aria-label="다른 표지 색상 선택"></label></fieldset>
+        <label>공개 범위<select name="visibility"><option value="public">전체 공개</option><option value="private">비공개</option><option value="unlisted">일부 공개 · 링크</option></select></label>
+        <label>책자 번호<input name="number" maxlength="12" placeholder="자동" autocomplete="off"></label>
+        <label class="ar-wide-field">짧은 소개<textarea name="summary" rows="3" maxlength="500"></textarea></label>
+        <label class="ar-wide-field" data-photo-field>소개 사진<input name="photos" type="file" multiple accept=".jpg,.jpeg,.png,.webp"></label>
+        <div class="ar-wide-field ar-photo-editor" data-photo-previews></div>
+        <label class="ar-wide-field">소개<textarea name="body" rows="6" maxlength="12000"></textarea></label>
+        <fieldset class="ar-wide-field ar-links-field"><legend>링크</legend><div data-link-rows></div><button type="button" class="ar-secondary" data-link-add>+ 링크 추가</button></fieldset>
+        <label class="ar-wide-field" data-file-field>첨부파일<input name="files" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.txt,.md,.markdown,.csv,.json,.mp4,.webm,.mp3,.wav,.hwp,.hwpx,.docx,.pptx,.xlsx,.zip"><span class="ar-picked-files" data-picked-files></span></label>
+        <div class="ar-wide-field ar-existing-files"></div>
+        <label class="ar-wide-field" data-primary-field hidden>아래에 표시할 첨부파일<select name="primaryAttachment"></select></label>
+      </div>
+      </div>
+      <p class="ar-form-error" role="alert"></p>
+    </form>
+  </section>
+  <aside class="ar-peek" aria-label="미리보기" hidden></aside>
+  <dialog class="ar-document" data-document aria-labelledby="ar-document-title"><header><div><h2 id="ar-document-title" data-document-title></h2><span data-document-mode></span></div><div><select data-document-history aria-label="수정 이력" hidden></select><button type="button" data-document-close>취소</button><button type="button" data-document-save>저장</button></div></header><div class="ar-document-content" data-document-content></div><p role="status"></p></dialog>
+  <dialog class="ar-folder-dialog" data-folder-dialog aria-labelledby="ar-folder-dialog-title"><form><h2 id="ar-folder-dialog-title">폴더 만들기</h2><input name="folderName" aria-label="폴더 이름" maxlength="80" required autocomplete="off"><div><button type="button" data-folder-cancel>취소</button><button type="submit">저장</button></div><p role="alert"></p></form></dialog>
+  <dialog class="ar-confirm" aria-labelledby="ar-confirm-title"><h2 id="ar-confirm-title"></h2><div><button type="button" class="ar-secondary cursor-interaction" data-delete-cancel>취소</button><button type="button" class="ar-primary cursor-interaction" data-delete-confirm>삭제</button></div><p role="alert" data-delete-error></p></dialog>
+  <div class="ar-status" role="status" aria-live="polite"></div>
+  <script type="application/json" id="ar-seed"><!--SEEDS--></script>
+</section>
+<!--STYLES-->
+<!--SCRIPT-->

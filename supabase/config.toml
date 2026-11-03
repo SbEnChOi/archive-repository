@@ -1,0 +1,3 @@
+[functions.archive-api]
+# The handler verifies Auth itself; public records and share links allow anonymous reads.
+verify_jwt = false

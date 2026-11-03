@@ -1,0 +1,30 @@
+{
+  "name": "archive-repository",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-web.cjs",
+    "build:cloud": "node tools/build-cloud.cjs",
+    "start": "node tools/build-web.cjs && node server.cjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:cloud": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0",
+    "dompurify": "3.4.17",
+    "fflate": "0.8.3",
+    "mammoth": "1.13.0",
+    "marked": "18.1.1",
+    "pdfjs-dist": "6.4.299"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.10",
+    "@resvg/resvg-js": "2.6.2",
+    "@xmldom/xmldom": "0.9.12",
+    "esbuild": "0.28.2"
+  },
+  "type": "module"
+}

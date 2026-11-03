@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build:cloud",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {"source": "/r/:id", "destination": "/index.html"},
+    {"source": "/public", "destination": "/index.html"},
+    {"source": "/admin", "destination": "/admin.html"},
+    {"source": "/auth/callback", "destination": "/index.html"},
+    {"source": "/demo/:id", "destination": "/demo.html"}
+  ],
+  "headers": [
+    {"source": "/(.*)", "headers": [
+      {"key": "X-Content-Type-Options", "value": "nosniff"},
+      {"key": "Referrer-Policy", "value": "no-referrer"},
+      {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
+      {"key": "Cache-Control", "value": "no-store"}
+    ]}
+  ]
+}

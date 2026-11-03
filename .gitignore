@@ -1,0 +1,15 @@
+data/
+output/
+*.log
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vercel/
+.supabase/
+web/*
+!web/repository-adapter.js
+.cursor/
+docs/superpowers/
+*.url
