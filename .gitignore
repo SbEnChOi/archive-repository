@@ -13,3 +13,4 @@ web/*
 .cursor/
 docs/superpowers/
 *.url
+.hallmark/

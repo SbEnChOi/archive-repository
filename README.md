@@ -146,3 +146,5 @@ PDF는 PDF.js, Markdown은 marked와 DOMPurify, Word 미리보기는 mammoth를 
 디자인 참고: [Form Follows Function](https://fff.cmiscm.com/#!/main). 글꼴: [Pretendard](https://github.com/orioncactus/pretendard). 의존 라이브러리의 라이선스는 각 패키지를 따른다.
 
 프로젝트의 목적, 화면 피드백, 기능 우선순위는 제작자가 정했다. AI 코딩 도구는 구현·오류 분석·테스트·문서 정리를 도왔다. 이 개발 일지는 대화에서 결정한 방향과 저장된 소스·검증 자료를 바탕으로 정리했으며, 당시 남기지 않은 성능 수치나 사용 성과를 추가하지 않았다.
+
+첫 접속 시 Motion 기반으로 로고와 책자가 나타난다. 입력이 들어오면 즉시 완료하고, 기록 직접 주소와 모션 감소 환경에서는 진입 모션을 생략한다. 2026-11-04 변경과 검증은 [개발 일지](docs/DEVELOPMENT.md#2026-11-04--기존-책장에-진입-모션-더하기)에 정리했다.

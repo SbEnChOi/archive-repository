@@ -13,3 +13,5 @@
 - `pdf-render-test.png`: 테스트용 원본 PDF 렌더 결과. 원본 `output/pdf/cloud-report.png`.
 
 개별 이미지의 정확한 촬영 시각은 추정하지 않았다. README와 개발 일지에서 각 단계의 설명 자료로 사용한다.
+
+- `motion-polish-desktop.png`, `motion-polish-mobile.png`: 2026-11-04 Motion 진입 효과와 조작부 개선 후 격리된 예시 데이터로 확인한 화면. 원본 `output/design-check/ready-desktop.png`, `ready-mobile.png`. 정지 화면이므로 움직임의 전체 시간을 나타내지는 않는다.

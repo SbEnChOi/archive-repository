@@ -18,13 +18,15 @@
     "fflate": "0.8.3",
     "mammoth": "1.13.0",
     "marked": "18.1.1",
+    "motion": "14.9.0",
     "pdfjs-dist": "6.4.299"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.10",
     "@resvg/resvg-js": "2.6.2",
     "@xmldom/xmldom": "0.9.12",
-    "esbuild": "0.28.2"
+    "esbuild": "0.28.2",
+    "puppeteer-core": "^25.16.0"
   },
   "type": "module"
 }

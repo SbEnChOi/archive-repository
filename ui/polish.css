@@ -1,0 +1,44 @@
+/* Hallmark · checked: 2026-11-04 · genre: editorial · scope: app · redesign: polish · built: the project · v2.0.0 */
+/* Pre-emit critique: P4 H4 E4 S5 R5 V3; weakest: variety; the original book arc is intentionally the signature. */
+/* User material: original cover metadata, palette emoji and settings-book gear remain; no marketing hero. */
+html,body{overflow-x:clip}
+#ar-preview{--ar-paper:var(--ar-polish-paper);--ar-ink:var(--ar-polish-ink);--ar-muted:var(--ar-polish-muted);--ar-rule:var(--ar-polish-rule);font-family:var(--ar-font-body)}
+#ar-preview .ar-header{top:28px}
+#ar-preview .ar-monogram{font-size:32px;min-width:48px;min-height:48px;letter-spacing:-2px;border-radius:50%;transition:background-color .18s,color .18s}
+#ar-preview .ar-monogram:hover{background:var(--ar-polish-hover)}
+#ar-preview .ar-monogram:active{color:var(--ar-polish-muted)}
+#ar-preview .ar-book{box-shadow:1px 3px 8px var(--ar-book-shadow),inset -1px 0 var(--ar-book-edge);transition:translate .24s cubic-bezier(.2,.75,.2,1);translate:0 0}
+#ar-preview .ar-book:hover,#ar-preview .ar-book:focus-visible{translate:0 -8px;filter:none}
+#ar-preview .ar-book:active{translate:0 -3px}
+#ar-preview .ar-book-label{color:var(--ar-polish-muted);font-weight:400;line-height:1.45}
+#ar-preview .ar-book-label span:last-child{color:var(--ar-polish-muted)}
+#ar-preview .ar-cover-inner:before{opacity:.24}
+#ar-preview .ar-detail-cover{box-shadow:0 22px 64px var(--ar-detail-shadow),inset 1px 0 var(--ar-book-edge)}
+#ar-preview .ar-folder-book{box-shadow:none}
+#ar-preview .ar-collection-footer{bottom:24px;display:flex;flex-direction:column;gap:12px;max-width:calc(100% - 32px)}
+#ar-preview .ar-wordmark{font-size:13px;color:var(--ar-polish-muted);line-height:1.5}
+#ar-preview .ar-collection-navigation{display:flex;align-items:center;gap:4px;padding:6px 8px;border:1px solid var(--ar-polish-rule);border-radius:32px;background:var(--ar-polish-dock);box-shadow:0 8px 28px var(--ar-dock-shadow)}
+#ar-preview .ar-collection-navigation button{min-width:44px;min-height:44px;padding:0 12px;border-radius:24px;color:var(--ar-polish-ink);font-size:12px;white-space:nowrap;transition:background-color .18s,color .18s}
+#ar-preview .ar-collection-navigation button:hover:not(:disabled){background:var(--ar-polish-hover)}
+#ar-preview .ar-collection-navigation button:active:not(:disabled){background:var(--ar-polish-pressed)}
+#ar-preview .ar-collection-navigation .ar-arrow{font-size:24px;padding:0;width:44px}
+#ar-preview .ar-collection-navigation .ar-settings-button{padding:0;width:44px;font-size:18px}
+#ar-preview [data-collection-count]{min-width:58px;font-size:12px;color:var(--ar-polish-muted);font-variant-numeric:tabular-nums;letter-spacing:0}
+#ar-preview .ar-footer-divider{display:none}
+#ar-preview :is(button,a,input,textarea,select,[tabindex]):focus-visible{outline:2px solid var(--ar-polish-focus);outline-offset:4px}
+#ar-preview .ar-cover-stage :is(button,a,[tabindex]):focus-visible,#ar-preview.ar-editor-open :is(button,a,input,textarea,select):focus-visible{outline-color:var(--ar-focus-on-dark)}
+#ar-preview button:disabled{color:var(--ar-polish-disabled);background:var(--ar-polish-disabled-bg);opacity:1;cursor:not-allowed}
+#ar-preview .ar-collection-navigation button:disabled{background:var(--ar-polish-disabled-bg);color:var(--ar-polish-disabled)}
+#ar-preview .ar-overview .ar-actions .ar-primary{border-radius:5px}
+#ar-preview .ar-overview .ar-actions .ar-secondary{border-radius:5px;transition:background-color .18s,border-color .18s}
+#ar-preview .ar-overview .ar-actions .ar-secondary:hover{background:var(--ar-hover-on-dark);border-color:var(--ar-rule-on-dark)}
+#ar-preview .ar-overview h2{text-wrap:balance}
+#ar-preview .ar-book-number{font-variant-numeric:tabular-nums}
+#ar-preview .ar-editor :is(input,textarea,select){transition:border-color .18s,background-color .18s}
+#ar-preview .ar-editor :is(input,textarea,select):hover{border-color:var(--ar-rule-on-dark)}
+#ar-preview .ar-peek{border-radius:8px;box-shadow:0 12px 36px var(--ar-dock-shadow)}
+#ar-preview .ar-noscript{display:block;text-align:center;padding:24px;color:var(--ar-polish-ink)}
+@media(min-width:1600px){#ar-preview .ar-shelf{max-width:1800px;left:50%;transform:translateX(-50%);width:100%}}
+@media(max-width:640px){#ar-preview .ar-header{top:18px}#ar-preview .ar-collection-footer{bottom:max(16px,env(safe-area-inset-bottom));gap:10px}#ar-preview .ar-collection-navigation{gap:0;padding:4px;max-width:100%;border-radius:28px}#ar-preview .ar-collection-navigation button{padding:0 8px;font-size:11px}#ar-preview .ar-collection-navigation .ar-arrow{width:40px;min-width:40px}#ar-preview .ar-collection-navigation .ar-settings-button{width:40px;min-width:40px}#ar-preview [data-collection-count]{min-width:48px;font-size:11px}#ar-preview .ar-wordmark{font-size:12px}#ar-preview .ar-book:hover{translate:0 0}}
+@media(prefers-reduced-motion:reduce){#ar-preview *,#ar-preview *:before,#ar-preview *:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}#ar-preview .ar-book:hover,#ar-preview .ar-book:focus-visible{translate:0 0}}
+#ar-preview .ar-cover-stage button:disabled{color:var(--ar-rule-on-dark);background:var(--ar-hover-on-dark);border-color:var(--ar-rule-on-dark)}
