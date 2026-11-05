@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createLoadGate,createArchiveStartup} from '../ui/startup.js';
+const flush=()=>new Promise(resolve=>setImmediate(resolve));
+const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return{promise,resolve,reject};};
+function setup(){const requests=[],events=[],timers=new Map();let count=0;const gate=createLoadGate({load:()=>{const item=deferred();requests.push(item);return item.promise;},commit:data=>events.push(['commit',data]),pending:()=>events.push(['pending']),ready:()=>events.push(['ready']),failed:error=>events.push(['error',error.message]),setTimer:fn=>{timers.set(++count,fn);return count;},clearTimer:id=>timers.delete(id)});return{gate,requests,events,timers};}
+test('records commit before reveal with no minimum-duration hold',async()=>{const s=setup();const work=s.gate.run();await flush();s.requests[0].resolve('records');await work;assert.deepEqual(s.events,[['pending'],['commit','records'],['ready']]);assert.equal(s.timers.size,0);});
+test('network error remains an error; retry reveals only fresh data',async()=>{const s=setup();const work=s.gate.run();await flush();s.requests[0].reject(Error('offline'));await work;assert.deepEqual(s.events.at(-1),['error','offline']);const retry=s.gate.run();await flush();s.requests[1].resolve('fresh');await retry;assert.deepEqual(s.events.slice(-2),[['commit','fresh'],['ready']]);});
+test('timeout frees retry, late data cannot overwrite successful retry',async()=>{const s=setup();const work=s.gate.run();await flush();[...s.timers.values()][0]();await work;assert.equal(s.events.at(-1)[0],'error');const retry=s.gate.run();await flush();s.requests[1].resolve('fresh');await retry;s.requests[0].resolve('stale');await flush();assert.deepEqual(s.events.filter(e=>e[0]==='commit'),[['commit','fresh']]);assert.equal(s.timers.size,0);});
+test('overlapping runs apply only the latest response',async()=>{const s=setup();const first=s.gate.run();await flush();const second=s.gate.run();await flush();s.requests[1].resolve('second');await second;s.requests[0].resolve('first');await first;assert.deepEqual(s.events.filter(e=>e[0]==='commit'),[['commit','second']]);});
+test('failed load retries before preparing the entrance behind the startup surface',async()=>{
+ const original=globalThis.getComputedStyle;globalThis.getComputedStyle=()=>({transform:'none',opacity:'1'});
+ try{
+  const surface=new EventTarget(),retry=new EventTarget(),media=new EventTarget(),mark={},line={},logo={},error={},status={},content={matches:()=>true},root={dataset:{},children:[content],querySelector:selector=>selector==='[data-startup]'?surface:null};media.matches=false;surface.querySelector=selector=>({'.ar-startup-mark':mark,'.ar-startup-line':line,'.ar-startup-logo':logo,'[data-startup-error]':error,'[data-startup-retry]':retry,'[data-startup-status]':status})[selector];
+  const events=[],requests=[];const startup=createArchiveStartup({root,media,animate:()=>{const d=deferred();return{then:d.promise.then.bind(d.promise),cancel:d.resolve};},onPrepare:()=>events.push(['prepare',root.dataset.startup,surface.hidden,content.inert]),onReveal:()=>events.push(['reveal',root.dataset.startup,surface.hidden,content.inert]),onError:()=>events.push(['error'])});
+  const work=startup.load(()=>{const d=deferred();requests.push(d);return d.promise;},data=>events.push(['commit',data]));await flush();requests[0].reject(Error('offline'));await work;assert.equal(root.dataset.startup,'error');assert.equal(retry.disabled,false);assert.deepEqual(events,[['error']]);
+  retry.dispatchEvent(new Event('click'));await flush();requests[1].resolve('fresh');await flush();assert.deepEqual(events,[['error'],['commit','fresh'],['prepare','loading',false,true]]);assert.equal(root.dataset.startup,'revealing');assert.equal(surface.hidden,false);
+  surface.dispatchEvent(new Event('pointerdown'));await flush();assert.deepEqual(events.at(-1),['reveal','ready',true,false]);
+ }finally{globalThis.getComputedStyle=original;}
+});

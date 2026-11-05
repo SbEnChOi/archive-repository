@@ -1,8 +1,9 @@
-<section id="ar-preview" lang="ko" aria-label="Archive Repository">
+<section data-startup="loading" id="ar-preview" lang="ko" aria-label="Archive Repository">
+  <section class="ar-startup" data-startup aria-label="시작 화면"><div class="ar-startup-mark"><span class="ar-startup-logo" aria-hidden="true">ar.</span><span class="ar-startup-line" aria-hidden="true"></span></div><span class="ar-visually-hidden" role="status" data-startup-status>기록 불러오는 중</span><div class="ar-startup-error" data-startup-error hidden><p role="alert">기록을 불러오지 못했어요.</p><button type="button" data-startup-retry>다시 시도</button></div></section>
   <header class="ar-header">
     <button class="ar-monogram cursor-interaction" type="button" data-home aria-label="처음으로">ar.</button>
   </header>
-  <noscript><a class="ar-noscript" href="https://github.com/SbEnChOi/archive-repository">GitHub</a></noscript>
+  <noscript><style>#ar-preview .ar-startup{display:none!important}#ar-preview[data-startup] > :not(.ar-startup){visibility:visible}html{overflow-y:auto!important}</style><a class="ar-noscript" href="https://github.com/SbEnChOi/archive-repository">GitHub</a></noscript>
   <main class="ar-collection">
     <div class="ar-folder-current" data-folder-current hidden><button type="button" data-folder-back data-folder-target="" aria-label="폴더 닫기 · 폴더 밖으로 이동">↙</button><span data-folder-title></span><button type="button" data-folder-prev aria-label="폴더 이전 책자">‹</button><span data-folder-count></span><button type="button" data-folder-next aria-label="폴더 다음 책자">›</button><button type="button" data-folder-rename aria-label="폴더 이름 변경"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15Z"/></svg></button><button type="button" data-folder-delete aria-label="폴더 삭제">×</button></div>
     <div class="ar-shelf" aria-label="책자 컬렉션"></div>

@@ -4,9 +4,10 @@
 html,body{overflow-x:clip}
 #ar-preview{--ar-paper:var(--ar-polish-paper);--ar-ink:var(--ar-polish-ink);--ar-muted:var(--ar-polish-muted);--ar-rule:var(--ar-polish-rule);font-family:var(--ar-font-body)}
 #ar-preview .ar-header{top:28px}
-#ar-preview .ar-monogram{font-size:32px;min-width:48px;min-height:48px;letter-spacing:-2px;border-radius:50%;transition:background-color .18s,color .18s}
+#ar-preview .ar-monogram{font-size:32px;font-weight:400;min-width:48px;min-height:48px;letter-spacing:-2px;border-radius:50%;transition:background-color .18s,color .18s}
 #ar-preview .ar-monogram:hover{background:var(--ar-polish-hover)}
 #ar-preview .ar-monogram:active{color:var(--ar-polish-muted)}
+#ar-preview .ar-book-title,#ar-preview .ar-book-title.ar-korean,#ar-preview .ar-overview h2,#ar-preview .ar-detail-title{font-weight:350}
 #ar-preview .ar-book{box-shadow:1px 3px 8px var(--ar-book-shadow),inset -1px 0 var(--ar-book-edge);transition:translate .24s cubic-bezier(.2,.75,.2,1);translate:0 0}
 #ar-preview .ar-book:hover,#ar-preview .ar-book:focus-visible{translate:0 -8px;filter:none}
 #ar-preview .ar-book:active{translate:0 -3px}

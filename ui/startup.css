@@ -1,0 +1,18 @@
+/* Hallmark · checked: 2026-11-04 · genre: editorial · scope: app · built: the project · startup state */
+/* A real-data wait with a wordmark, no invented progress percentage or timed holding screen. */
+#ar-preview[data-startup=loading] > :not(.ar-startup):not(noscript):not(style):not(script),
+#ar-preview[data-startup=error] > :not(.ar-startup):not(noscript):not(style):not(script){visibility:hidden}
+html:has(#ar-preview[data-startup=loading]),html:has(#ar-preview[data-startup=error]),html:has(#ar-preview[data-startup=revealing]){overflow-y:clip}
+#ar-preview .ar-startup{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;min-height:100dvh;overflow:clip;background:var(--ar-polish-paper);color:var(--ar-polish-ink);font-family:var(--ar-font-body);text-align:center;padding:24px}
+#ar-preview .ar-startup-mark{display:flex;flex-direction:column;align-items:center;width:100%;min-width:0;gap:28px;transform:translateY(-16px)}
+#ar-preview .ar-startup-logo{font-size:clamp(100px,12vw,156px);font-weight:250;letter-spacing:-.065em;line-height:1.15;padding-right:.065em;user-select:none}
+#ar-preview .ar-startup-line{display:block;width:100vw;height:1px;background:var(--ar-polish-ink);opacity:.5;transform-origin:center}
+#ar-preview[data-startup=error] .ar-startup-line{visibility:hidden}
+#ar-preview .ar-startup-error{display:grid;justify-items:center;gap:16px;position:absolute;top:calc(50% + 120px);left:24px;right:24px}
+#ar-preview .ar-startup-error p{font-size:14px;line-height:1.6;color:var(--ar-polish-muted);margin:0}
+#ar-preview .ar-startup-error button{font:inherit;font-size:13px;min-height:44px;padding:10px 22px;border:1px solid var(--ar-polish-rule);border-radius:24px;background:var(--ar-polish-dock);color:var(--ar-polish-ink);cursor:pointer;transition:background-color .18s}
+#ar-preview .ar-startup-error button:hover{background:var(--ar-polish-hover)}
+#ar-preview .ar-startup-error button:active{background:var(--ar-polish-pressed)}
+#ar-preview .ar-startup-error button:focus-visible{outline:2px solid var(--ar-polish-focus);outline-offset:4px}
+@media(max-width:640px){#ar-preview .ar-startup-mark{gap:24px}#ar-preview .ar-startup-error{top:calc(50% + 100px)}}
+@media(prefers-reduced-motion:reduce){#ar-preview .ar-startup-error button{transition:none}}

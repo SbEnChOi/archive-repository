@@ -27,7 +27,7 @@
       const width=root.clientWidth,mobile=width<=640,height=standalone?Math.max(520,Math.min(1080,innerHeight)):Math.max(mobile?600:620,Math.min(900,width*.625));
       const baseBookHeight=mobile?Math.min(202,width*.48):Math.min(310,height*.345),bookHeight=baseBookHeight*(upper ? .68 : 1),bookWidth=bookHeight*220/310;
       const radius=(mobile?Math.max(550,width*1.6):Math.max(700,width*.765))*(upper ? .9 : 1),step=upper?7:mobile?10.8:getSpread();
-      const anchor=upper?getAnchor():null;geometry={width,height,bookWidth,bookHeight,radius,top:upper?Math.max(82,(anchor?.top??height*.445)-bookHeight-40):height*.445,step,anchorX:upper?Math.max(-width*.28,Math.min(width*.28,anchor?.x||0)):0};
+      const anchor=upper?getAnchor():null;geometry={width,height,bookWidth,bookHeight,radius,top:upper?Math.max(82,(anchor?.top??height*.445)-bookHeight-40):height*.445,step,anchorX:upper?(anchor?.x||0):0};
       if(upper){shelf.style.setProperty('--ar-book-width',bookWidth+'px');shelf.style.setProperty('--ar-book-height',bookHeight+'px');current=clamp(current);target=clamp(target);draw();return;}
       root.style.setProperty('--ar-scene-height',height+'px');root.style.setProperty('--ar-scene-width',width+'px');root.style.setProperty('--ar-book-width',bookWidth+'px');root.style.setProperty('--ar-book-height',bookHeight+'px');root.style.setProperty('--ar-expanded-width',Math.min(510,height*.8*220/310,Math.max(150,width-116))+'px');root.style.setProperty('--ar-overview-cover-width',Math.min(420,width*.36,height*.64*220/310)+'px');
       current=clamp(current);target=clamp(target);draw();
